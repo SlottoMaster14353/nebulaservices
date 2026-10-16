@@ -3,64 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000B25">
+  <meta name="theme-color" content="#030712">
   <title>Media · Nebula Services</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="bg-layer" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html"><span class="logo" aria-hidden="true"></span><span class="word">NEBULA</span><span class="sub">SERVICES</span></a>
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="word">NEBULA</span>
+        <span class="sub">SERVICES</span>
+      </a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="media.html" class="is-active">Media</a>
+        <a href="access.html">Request Access</a>
         <a href="legal.html">Legal</a>
         <a class="nav-cta" href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
       </nav>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false"><i aria-hidden="true"></i></button>
     </div>
   </header>
+
   <nav class="nav-drawer" aria-label="Mobile">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="media.html" class="is-active">Media</a>
+    <a href="access.html">Request Access</a>
     <a href="legal.html">Legal</a>
     <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
   </nav>
+
   <main>
-    <section class="page-hero"><div class="wrap">
-      <div class="kicker">Private media</div>
-      <h1>Jellyfin behind<br><span class="grad">Zero Trust.</span></h1>
-      <p class="lead">Invitation-only media server. No public library. No open registration.</p>
-      <a class="btn btn-primary" href="https://jellyfin.nebulaservices.live" target="_blank" rel="noopener noreferrer">Open jellyfin.nebulaservices.live ↗</a>
-    </div></section>
-    <section class="section" style="padding-top:12px"><div class="wrap">
-      <div class="access-box">
-        <h2>How access works</h2>
-        <ol class="steps">
-          <li><strong>Organization membership</strong> An admin adds your email to the Cloudflare organization. You get an auth / invite code at that address.</li>
-          <li><strong>Browser access</strong> Visit <a href="https://jellyfin.nebulaservices.live" target="_blank" rel="noopener noreferrer">jellyfin.nebulaservices.live</a> and complete Cloudflare Access with the authorized email.</li>
-          <li><strong>Mobile Jellyfin clients</strong> Official Jellyfin app plus the <strong>Cloudflare One (WARP)</strong> agent. Mobile only works while the agent session is active.</li>
-        </ol>
-        <div class="note"><strong>If you have not been invited, stop here.</strong> No self-service signup. No public trial.</div>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="kicker">Private media</div>
+        <h1>Jellyfin behind<br><span class="grad">Zero Trust.</span></h1>
+        <p class="lead">A privately owned, invitation-only media server. No public library. No open registration. Content acquired through legal channels only.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px">
+          <a class="btn btn-primary" href="https://jellyfin.nebulaservices.live" target="_blank" rel="noopener noreferrer">Open jellyfin.nebulaservices.live ↗</a>
+          <a class="btn btn-ghost" href="access.html">Request Access</a>
+        </div>
       </div>
-    </div></section>
-    <section class="section"><div class="wrap contact-row">
-      <div><div class="kicker">Need to be added?</div><h2>Request access from the admin</h2></div>
-      <a class="btn btn-primary" href="mailto:milnerg-admin@nebulaservices.live?subject=Media%20access%20request">Email the admin</a>
-    </div></section>
+    </section>
+
+    <section class="section" style="padding-top:12px">
+      <div class="wrap">
+        <div class="access-box">
+          <h2>How access works</h2>
+          <ol class="steps">
+            <li>
+              <strong>Organization membership</strong>
+              An admin adds your email to the Cloudflare organization. You receive an auth / invite code at that address.
+            </li>
+            <li>
+              <strong>Browser access</strong>
+              Visit <a href="https://jellyfin.nebulaservices.live" target="_blank" rel="noopener noreferrer">jellyfin.nebulaservices.live</a> and complete Cloudflare Access with the authorized email.
+            </li>
+            <li>
+              <strong>Mobile Jellyfin clients</strong>
+              Official Jellyfin app plus the <strong>Cloudflare One (WARP)</strong> agent. Mobile only works while the agent session is active.
+            </li>
+          </ol>
+          <div class="note">
+            <strong>If you have not been invited, stop here.</strong> No self-service signup. No public trial. Use the <a href="access.html" style="color:var(--blue)">access request form</a> to ask to be added.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap contact-row">
+        <div>
+          <div class="kicker">Need to be added?</div>
+          <h2>Request access from the admin</h2>
+          <p class="lead">Submit a short form. Approved emails are added to the list manually.</p>
+        </div>
+        <a class="btn btn-primary" href="access.html">Request Access →</a>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="wrap">
-    <div class="footer-top">
-      <a class="brand" href="index.html"><span class="logo" aria-hidden="true"></span><span class="word">NEBULA</span><span class="sub">SERVICES</span></a>
-      <div class="footer-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="media.html">Media</a><a href="legal.html">Legal</a><a href="mailto:milnerg-admin@nebulaservices.live">Contact</a></div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span class="word">NEBULA</span>
+          <span class="sub">SERVICES</span>
+        </a>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="media.html">Media</a>
+          <a href="access.html">Request Access</a>
+          <a href="legal.html">Legal</a>
+          <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Nebula Services</span>
+        <span>Private · Invite-only · Content acquired through legal channels</span>
+        <a href="legal.html">Full legal notice →</a>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Nebula Services</span><span>Private · Invite-only · Content acquired through legal channels</span><a href="legal.html">Full legal notice →</a></div>
-  </div></footer>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

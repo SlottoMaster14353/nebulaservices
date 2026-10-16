@@ -3,72 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000B25">
+  <meta name="theme-color" content="#030712">
   <title>Services · Nebula Services</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="bg-layer" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html"><span class="logo" aria-hidden="true"></span><span class="word">NEBULA</span><span class="sub">SERVICES</span></a>
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="word">NEBULA</span>
+        <span class="sub">SERVICES</span>
+      </a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html" class="is-active">Services</a>
         <a href="media.html">Media</a>
+        <a href="access.html">Request Access</a>
         <a href="legal.html">Legal</a>
         <a class="nav-cta" href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
       </nav>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false"><i aria-hidden="true"></i></button>
     </div>
   </header>
+
   <nav class="nav-drawer" aria-label="Mobile">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html" class="is-active">Services</a>
     <a href="media.html">Media</a>
+    <a href="access.html">Request Access</a>
     <a href="legal.html">Legal</a>
     <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
   </nav>
+
   <main>
-    <section class="page-hero"><div class="wrap">
-      <div class="kicker">Services</div>
-      <h1>What we actually<br><span class="grad">build and run.</span></h1>
-      <p class="lead">Practical digital work and private infrastructure. No fluff layers.</p>
-    </div></section>
-    <section class="section" style="padding-top:8px"><div class="wrap">
-      <div class="cards-2">
-        <article class="card" style="min-height:auto">
-          <div class="card-icon">⌘</div>
-          <h3>Digital Services</h3>
-          <p>Landing pages, internal tools, small web applications, and automation that stays maintainable.</p>
-        </article>
-        <article class="card" style="min-height:auto">
-          <div class="card-icon">◈</div>
-          <h3>Infrastructure</h3>
-          <p>Cloudflare Access, Zero Trust posture, and invite-only email identity for protected resources.</p>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="kicker">Services</div>
+        <h1>What we actually<br><span class="grad">build and run.</span></h1>
+        <p class="lead">Practical digital work, private infrastructure, and a closed media platform. No fluff layers.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px">
+      <div class="wrap">
+        <div class="cards-2">
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">⌘</div>
+            <h3>Digital Services</h3>
+            <p>Landing pages, internal tools, small web applications, and automation that stays maintainable and clear.</p>
+          </article>
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">◈</div>
+            <h3>Infrastructure</h3>
+            <p>Cloudflare Access, Zero Trust posture, and invite-only email identity for protected resources.</p>
+          </article>
+        </div>
+
+        <article class="card" style="margin-top:20px; min-height:auto">
+          <div class="card-icon">✧</div>
+          <h3>Private Media Platform</h3>
+          <p>A privately owned, invitation-only Jellyfin instance. Legally acquired content. Mobile requires Cloudflare One. Access is controlled by an admin-approved email list — never open registration.</p>
+          <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:12px">
+            <a class="btn btn-primary" href="media.html">Media access details →</a>
+            <a class="btn btn-ghost" href="access.html">Request Access</a>
+          </div>
         </article>
       </div>
-      <article class="card" style="margin-top:20px;min-height:auto">
-        <div class="card-icon">✧</div>
-        <h3>Private Media Platform</h3>
-        <p>Closed Jellyfin for authorized members. Legally acquired content. Mobile requires Cloudflare One.</p>
-        <a class="btn btn-primary" style="margin-top:20px;align-self:flex-start" href="media.html">Media access details →</a>
-      </article>
-    </div></section>
-    <section class="section"><div class="wrap contact-row">
-      <div><div class="kicker">Next step</div><h2>Discuss a project or access</h2></div>
-      <a class="btn btn-primary" href="mailto:milnerg-admin@nebulaservices.live">Email the admin</a>
-    </div></section>
+    </section>
+
+    <section class="section">
+      <div class="wrap contact-row">
+        <div>
+          <div class="kicker">Next step</div>
+          <h2>Discuss a project or request access</h2>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn btn-primary" href="access.html">Request Access</a>
+          <a class="btn btn-ghost" href="mailto:milnerg-admin@nebulaservices.live">Email the admin</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="wrap">
-    <div class="footer-top">
-      <a class="brand" href="index.html"><span class="logo" aria-hidden="true"></span><span class="word">NEBULA</span><span class="sub">SERVICES</span></a>
-      <div class="footer-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="media.html">Media</a><a href="legal.html">Legal</a><a href="mailto:milnerg-admin@nebulaservices.live">Contact</a></div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span class="word">NEBULA</span>
+          <span class="sub">SERVICES</span>
+        </a>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="media.html">Media</a>
+          <a href="access.html">Request Access</a>
+          <a href="legal.html">Legal</a>
+          <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Nebula Services</span>
+        <span>Private · Invite-only · Content acquired through legal channels</span>
+        <a href="legal.html">Full legal notice →</a>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Nebula Services</span><span>Private · Invite-only · Content acquired through legal channels</span><a href="legal.html">Full legal notice →</a></div>
-  </div></footer>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

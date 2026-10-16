@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030712">
+  <meta name="description" content="Request access to Nebula Services private media library and systems.">
+  <title>Request Access · Nebula Services</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="word">NEBULA</span>
+        <span class="sub">SERVICES</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="media.html">Media</a>
+        <a href="access.html" class="is-active">Request Access</a>
+        <a href="legal.html">Legal</a>
+        <a class="nav-cta" href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false">
+        <i aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-drawer" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="media.html">Media</a>
+    <a href="access.html" class="is-active">Request Access</a>
+    <a href="legal.html">Legal</a>
+    <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="kicker">Access request</div>
+        <h1>Request to be<br><span class="grad">added.</span></h1>
+        <p class="lead">Fill out the form below. An admin reviews every request and adds approved emails to the Cloudflare organization. There is no automatic approval.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px">
+      <div class="wrap" style="display:grid; grid-template-columns: 1fr 1fr; gap:48px; align-items:start">
+        <div class="form-card">
+          <div id="formSuccess" class="form-success" role="status"></div>
+
+          <form id="accessForm" novalidate>
+            <div class="form-group">
+              <label for="req-name">Full name</label>
+              <input type="text" id="req-name" name="name" required placeholder="Your name" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="req-email">Email address</label>
+              <input type="email" id="req-email" name="email" required placeholder="you@example.com" autocomplete="email">
+              <p class="form-hint">This is the address that will be added to the access list and receive auth codes.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="req-reason">What are you requesting?</label>
+              <select id="req-reason" name="reason" required>
+                <option value="" disabled selected>Select one…</option>
+                <option value="Private Media (Jellyfin)">Private Media (Jellyfin)</option>
+                <option value="Infrastructure / systems access">Infrastructure / systems access</option>
+                <option value="Both media + systems">Both media + systems</option>
+                <option value="Other / project discussion">Other / project discussion</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="req-notes">Additional notes (optional)</label>
+              <textarea id="req-notes" name="notes" placeholder="How you know the project, context, or anything helpful for review…"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit request →</button>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <div class="access-box">
+            <h2 style="font-size:1.25rem; margin-bottom:8px">What happens next</h2>
+            <ol class="steps">
+              <li>
+                <strong>You submit the form</strong>
+                Your details are sent to the admin via email.
+              </li>
+              <li>
+                <strong>Review</strong>
+                Requests are reviewed manually. Approved emails are added to the Cloudflare organization.
+              </li>
+              <li>
+                <strong>You receive access</strong>
+                You’ll get an invite / auth code at the email you provided. Then you can sign in at jellyfin.nebulaservices.live.
+              </li>
+            </ol>
+            <div class="note">
+              <strong>No self-service signup.</strong> Submitting this form does not grant access automatically. Only admin-approved emails are added to the list.
+            </div>
+          </div>
+
+          <p style="margin-top:28px; color:var(--muted); font-size:14px">
+            Prefer email directly?<br>
+            <a class="link" href="mailto:milnerg-admin@nebulaservices.live?subject=Access%20Request">milnerg-admin@nebulaservices.live</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span class="word">NEBULA</span>
+          <span class="sub">SERVICES</span>
+        </a>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="media.html">Media</a>
+          <a href="access.html">Request Access</a>
+          <a href="legal.html">Legal</a>
+          <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Nebula Services</span>
+        <span>Private · Invite-only · Content acquired through legal channels</span>
+        <a href="legal.html">Full legal notice →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
