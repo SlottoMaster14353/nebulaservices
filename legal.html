@@ -45,7 +45,7 @@
       <div class="wrap">
         <div class="kicker">Legal &amp; compliance</div>
         <h1>Clear rules.<br><span class="grad">Closed doors.</span></h1>
-        <p class="lead">No ambiguity about access, ownership, or intent.</p>
+        <p class="lead">No ambiguity about access, ownership, media sourcing, or what the public request form can and cannot grant.</p>
       </div>
     </section>
 
@@ -54,32 +54,39 @@
         <div class="badge">Private · Invite-only · Non-commercial</div>
 
         <h2>1. Nature of the service</h2>
-        <p>Nebula Services operates private digital systems and a privately owned, invitation-only media library. This is not a public streaming service or open product.</p>
+        <p>Nebula Services operates private digital systems and a privately owned, invitation-only media library. This is not a public streaming service, open product, or commercial platform for the general public.</p>
+        <p>The public website describes the project and allows people to request media access. Infrastructure, admin panels, and internal systems are not offered through that process and remain under operator control.</p>
 
         <h2>2. Media acquisition</h2>
-        <p><strong>All media is acquired through legal channels.</strong> Purchases, licenses, or other lawful means only.</p>
+        <p><strong>All media is acquired through legal channels.</strong> Purchases, licenses, or other lawful means only. Library content is not redistributed and may not be copied out of the service for sharing.</p>
 
         <h2>3. Access control</h2>
-        <p>Admins add specific emails to Cloudflare Access. Auth codes go to those emails only. There is no public registration. Users may request to be added via the access request form; approval is discretionary.</p>
+        <p>Access to the media host is enforced by Cloudflare Access. An administrator adds specific emails to the Access policy. Auth and invite flows use those emails only. There is no public registration and no automatic approval of form submissions.</p>
         <ul>
-          <li>No public registration</li>
-          <li>No shared accounts without approval</li>
-          <li>Mobile requires Cloudflare One + Jellyfin</li>
+          <li>The request form accepts <strong>Private Media</strong> and <strong>Other</strong> only. Other is for general questions, not infrastructure or admin access.</li>
+          <li>No public registration or self-service accounts</li>
+          <li>No shared accounts without prior written approval</li>
+          <li>Mobile clients require Cloudflare One (WARP) plus the official Jellyfin app</li>
+          <li>Access may be revoked at any time without notice</li>
         </ul>
 
         <h2>4. Prohibited</h2>
         <ul>
-          <li>Sharing credentials or auth codes</li>
-          <li>Bypassing Cloudflare Access</li>
+          <li>Sharing credentials, one-time codes, or Access sessions</li>
+          <li>Bypassing or attempting to bypass Cloudflare Access</li>
           <li>Redistributing library content</li>
-          <li>Commercial use without written agreement</li>
+          <li>Commercial use of the media library without written agreement</li>
+          <li>Requesting or expecting infrastructure / admin rights via the public form</li>
         </ul>
 
-        <h2>5. Contact</h2>
+        <h2>5. Privacy of requests</h2>
+        <p>Access request form data is emailed to the admin address for review. It is used only to evaluate and fulfill media access requests (or to answer genuine “Other” inquiries). Do not submit sensitive information beyond what is needed for review.</p>
+
+        <h2>6. Contact</h2>
         <p><a class="link" href="mailto:milnerg-admin@nebulaservices.live">milnerg-admin@nebulaservices.live</a></p>
 
         <div class="legal-box">
-          Access is invitation-only. The media platform is privately owned. Media is limited to legally acquired content. Unauthorized use is prohibited.
+          Access is invitation-only. The media platform is privately owned. Media is limited to legally acquired content. Unauthorized use is prohibited. Infrastructure and admin access are not available through the public request process.
         </div>
       </div>
     </section>
@@ -88,18 +95,9 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-top">
-        <a class="brand" href="index.html">
-          <span class="logo" aria-hidden="true"></span>
-          <span class="word">NEBULA</span>
-          <span class="sub">SERVICES</span>
-        </a>
+        <a class="brand" href="index.html"><span class="logo" aria-hidden="true"></span><span class="word">NEBULA</span><span class="sub">SERVICES</span></a>
         <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="media.html">Media</a>
-          <a href="access.html">Request Access</a>
-          <a href="legal.html">Legal</a>
-          <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
+          <a href="about.html">About</a><a href="services.html">Services</a><a href="media.html">Media</a><a href="access.html">Request Access</a><a href="legal.html">Legal</a><a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -109,7 +107,6 @@
       </div>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>

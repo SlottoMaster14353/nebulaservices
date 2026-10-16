@@ -45,34 +45,48 @@
       <div class="wrap">
         <div class="kicker">Services</div>
         <h1>What we actually<br><span class="grad">build and run.</span></h1>
-        <p class="lead">Practical digital work, private infrastructure, and a closed media platform. No fluff layers.</p>
+        <p class="lead">A private media platform for approved users, plus the infrastructure and digital work that keep closed systems reliable. Public requests are for media access only.</p>
       </div>
     </section>
 
     <section class="section" style="padding-top:8px">
       <div class="wrap">
-        <div class="cards-2">
-          <article class="card" style="min-height:auto">
-            <div class="card-icon">⌘</div>
-            <h3>Digital Services</h3>
-            <p>Landing pages, internal tools, small web applications, and automation that stays maintainable and clear.</p>
-          </article>
-          <article class="card" style="min-height:auto">
-            <div class="card-icon">◈</div>
-            <h3>Infrastructure</h3>
-            <p>Cloudflare Access, Zero Trust posture, and invite-only email identity for protected resources.</p>
-          </article>
-        </div>
-
-        <article class="card" style="margin-top:20px; min-height:auto">
+        <div class="kicker">01 / Available to approved users</div>
+        <article class="card" style="min-height:auto; margin-bottom:20px">
           <div class="card-icon">✧</div>
           <h3>Private Media Platform</h3>
-          <p>A privately owned, invitation-only Jellyfin instance. Legally acquired content. Mobile requires Cloudflare One. Access is controlled by an admin-approved email list — never open registration.</p>
+          <p>Invitation-only Jellyfin at jellyfin.nebulaservices.live. Content is acquired through legal channels. Access is gated by Cloudflare Access using an admin-approved email list. Browser login goes through Cloudflare’s identity check first; mobile apps require the Cloudflare One (WARP) agent with an active session.</p>
+          <p style="margin-top:12px">This is the only offering available through the public request form. Approval is manual and discretionary. Access can be revoked. Sharing credentials is prohibited.</p>
           <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:12px">
-            <a class="btn btn-primary" href="media.html">Media access details →</a>
+            <a class="btn btn-primary" href="media.html">How media &amp; Access work →</a>
             <a class="btn btn-ghost" href="access.html">Request Access</a>
           </div>
         </article>
+
+        <div class="kicker" style="margin-top:40px">02 / Internal / operator-only</div>
+        <p class="lead" style="margin-bottom:24px">The following describe how the project is run. They are not offered as public services or through the access form.</p>
+
+        <div class="cards-2">
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">◈</div>
+            <h3>Infrastructure</h3>
+            <p>Cloudflare Access policies, Zero Trust posture, DNS and edge configuration, and the private paths that keep hosts off the open internet. Managed by the operators for the media host and related systems. Not available as a product or invite to the public.</p>
+          </article>
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">⌘</div>
+            <h3>Digital services</h3>
+            <p>This site, internal tools, small applications, and automation used to operate the project. Built for clarity and low maintenance. External project work is not a standing offer on this site; contact the admin if you have a specific question.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose">
+        <h2>Cloudflare Access in this stack</h2>
+        <p>Protected applications (including the media host) are published through Cloudflare. An Access policy lists the emails that are allowed. When someone hits the URL, Cloudflare checks identity before the request is allowed through to the origin. Unlisted emails never see the application.</p>
+        <p>That is why “request access” means “ask to be added to the policy,” not “create an account on a public signup page.” The form on this site only accepts media-related requests; infrastructure control stays with the operators.</p>
+        <p>For the step-by-step login path (browser and mobile), see the <a class="link" href="media.html">Media</a> page.</p>
       </div>
     </section>
 
@@ -80,7 +94,8 @@
       <div class="wrap contact-row">
         <div>
           <div class="kicker">Next step</div>
-          <h2>Discuss a project or request access</h2>
+          <h2>Request media access</h2>
+          <p class="lead">Use the form for private media only. Other topics can be emailed directly.</p>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap">
           <a class="btn btn-primary" href="access.html">Request Access</a>
@@ -93,18 +108,9 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-top">
-        <a class="brand" href="index.html">
-          <span class="logo" aria-hidden="true"></span>
-          <span class="word">NEBULA</span>
-          <span class="sub">SERVICES</span>
-        </a>
+        <a class="brand" href="index.html"><span class="logo" aria-hidden="true"></span><span class="word">NEBULA</span><span class="sub">SERVICES</span></a>
         <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="media.html">Media</a>
-          <a href="access.html">Request Access</a>
-          <a href="legal.html">Legal</a>
-          <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
+          <a href="about.html">About</a><a href="services.html">Services</a><a href="media.html">Media</a><a href="access.html">Request Access</a><a href="legal.html">Legal</a><a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -114,7 +120,6 @@
       </div>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>

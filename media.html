@@ -45,7 +45,7 @@
       <div class="wrap">
         <div class="kicker">Private media</div>
         <h1>Jellyfin behind<br><span class="grad">Zero Trust.</span></h1>
-        <p class="lead">A privately owned, invitation-only media server. No public library. No open registration. Content acquired through legal channels only.</p>
+        <p class="lead">A privately owned, invitation-only media server. No public library. No open registration. Content is acquired through legal channels only. The host sits behind Cloudflare Access so only approved emails can reach it.</p>
         <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px">
           <a class="btn btn-primary" href="https://jellyfin.nebulaservices.live" target="_blank" rel="noopener noreferrer">Open jellyfin.nebulaservices.live ↗</a>
           <a class="btn btn-ghost" href="access.html">Request Access</a>
@@ -55,24 +55,92 @@
 
     <section class="section" style="padding-top:12px">
       <div class="wrap">
-        <div class="access-box">
-          <h2>How access works</h2>
+        <div class="kicker">01 / What the library is</div>
+        <div class="split">
+          <h2>Closed media.<br><span class="grad">Legal sources.</span></h2>
+          <div>
+            <p>The media platform is a Jellyfin instance operated solely for authorized members. It is not a public streaming product, not a shared free service, and not something you can self-register for.</p>
+            <p>All titles in the library are obtained through purchases, licenses, or other lawful channels. Redistribution of library content is prohibited. Access is tied to a single approved email and can be removed at any time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="kicker">02 / How Cloudflare Access works</div>
+        <h2>Identity at the edge<br>before the app.</h2>
+        <p class="lead" style="margin-bottom:28px">Cloudflare Access sits in front of jellyfin.nebulaservices.live. Nobody reaches the Jellyfin login page until Cloudflare has checked that their email is on the allow list.</p>
+
+        <div class="access-box" style="margin-bottom:28px">
+          <h2 style="font-size:1.2rem; margin-bottom:8px">The flow in plain language</h2>
           <ol class="steps">
             <li>
-              <strong>Organization membership</strong>
-              An admin adds your email to the Cloudflare organization. You receive an auth / invite code at that address.
+              <strong>You request access</strong>
+              Submit the form on the Request Access page. An admin reviews it. Infrastructure and admin systems are never offered through that form.
             </li>
             <li>
-              <strong>Browser access</strong>
-              Visit <a href="https://jellyfin.nebulaservices.live" target="_blank" rel="noopener noreferrer">jellyfin.nebulaservices.live</a> and complete Cloudflare Access with the authorized email.
+              <strong>Your email is added to the policy</strong>
+              If approved, the admin adds your email to the Cloudflare Access application policy for the media host. Only emails on that list can pass the gate.
             </li>
             <li>
-              <strong>Mobile Jellyfin clients</strong>
-              Official Jellyfin app plus the <strong>Cloudflare One (WARP)</strong> agent. Mobile only works while the agent session is active.
+              <strong>You visit the URL</strong>
+              Open <a href="https://jellyfin.nebulaservices.live" target="_blank" rel="noopener noreferrer">jellyfin.nebulaservices.live</a>. Cloudflare intercepts the request and shows its Access login screen — not Jellyfin yet.
+            </li>
+            <li>
+              <strong>You prove identity</strong>
+              Enter the approved email. Cloudflare sends a one-time code (or uses another configured method). After you complete that step, Cloudflare issues a short-lived session and lets the request through to Jellyfin.
+            </li>
+            <li>
+              <strong>Jellyfin loads</strong>
+              Only then do you see the Jellyfin interface. You may still need a Jellyfin account inside the app if one was created for you; the Cloudflare step is the outer lock.
             </li>
           </ol>
+        </div>
+
+        <div class="cards-2">
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">◈</div>
+            <h3>Browser</h3>
+            <p>Desktop and mobile browsers work after Cloudflare Access succeeds. The session is stored as a cookie for a limited time; when it expires you authenticate again.</p>
+          </article>
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">📱</div>
+            <h3>Mobile apps</h3>
+            <p>Official Jellyfin apps cannot complete Cloudflare’s browser login by themselves. You install <strong>Cloudflare One (WARP)</strong>, sign in with the same approved identity, and keep the agent connected while using the app.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose">
+        <div class="kicker">03 / Mobile setup</div>
+        <h2>Cloudflare One + Jellyfin</h2>
+        <p>Native Jellyfin clients talk to the server over the network. Because the host is protected by Access, traffic from the app is blocked unless the device is already authenticated via Cloudflare’s agent.</p>
+        <ul>
+          <li>Install <strong>Cloudflare One</strong> (also called WARP) from your platform’s store or Cloudflare’s site.</li>
+          <li>Sign in with the same email that was approved for Access.</li>
+          <li>Connect the agent so device traffic is allowed through the Zero Trust path.</li>
+          <li>Open the official Jellyfin app and point it at <strong>https://jellyfin.nebulaservices.live</strong>.</li>
+          <li>Keep WARP connected while streaming. If the agent disconnects, the app will lose access until you reconnect.</li>
+        </ul>
+        <p>Exact menu names can vary by Cloudflare One version and OS, but the idea is the same: the agent proves device identity so Access allows the app’s traffic.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="access-box">
+          <h2>Quick checklist</h2>
+          <ol class="steps">
+            <li><strong>Request</strong> — Use the access form. Media only.</li>
+            <li><strong>Wait for approval</strong> — Admin adds your email to Cloudflare Access.</li>
+            <li><strong>Browser</strong> — Visit jellyfin.nebulaservices.live and complete the Cloudflare login.</li>
+            <li><strong>Mobile</strong> — Cloudflare One agent + official Jellyfin app, agent left on.</li>
+          </ol>
           <div class="note">
-            <strong>If you have not been invited, stop here.</strong> No self-service signup. No public trial. Use the <a href="access.html" style="color:var(--blue)">access request form</a> to ask to be added.
+            <strong>If you have not been invited, stop here.</strong> There is no public trial and no self-service signup. <a href="access.html" style="color:var(--blue)">Request access</a> if you want to be considered.
           </div>
         </div>
       </div>
@@ -82,8 +150,8 @@
       <div class="wrap contact-row">
         <div>
           <div class="kicker">Need to be added?</div>
-          <h2>Request access from the admin</h2>
-          <p class="lead">Submit a short form. Approved emails are added to the list manually.</p>
+          <h2>Request media access</h2>
+          <p class="lead">Submit the short form. Approved emails are added to the Cloudflare Access list manually.</p>
         </div>
         <a class="btn btn-primary" href="access.html">Request Access →</a>
       </div>
@@ -93,18 +161,9 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-top">
-        <a class="brand" href="index.html">
-          <span class="logo" aria-hidden="true"></span>
-          <span class="word">NEBULA</span>
-          <span class="sub">SERVICES</span>
-        </a>
+        <a class="brand" href="index.html"><span class="logo" aria-hidden="true"></span><span class="word">NEBULA</span><span class="sub">SERVICES</span></a>
         <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="media.html">Media</a>
-          <a href="access.html">Request Access</a>
-          <a href="legal.html">Legal</a>
-          <a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
+          <a href="about.html">About</a><a href="services.html">Services</a><a href="media.html">Media</a><a href="access.html">Request Access</a><a href="legal.html">Legal</a><a href="mailto:milnerg-admin@nebulaservices.live">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -114,7 +173,6 @@
       </div>
     </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
