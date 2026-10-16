@@ -14,7 +14,7 @@
       gap: 48px;
       align-items: start;
     }
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       .access-layout {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -64,7 +64,7 @@
       <div class="wrap">
         <div class="kicker">Access request</div>
         <h1>Request to be<br><span class="grad">added.</span></h1>
-        <p class="lead">Fill out the form below. An admin reviews every request and adds approved emails to the Cloudflare organization. There is no automatic approval.</p>
+        <p class="lead">Fill out the form below. Every submission is emailed directly to the admin. Approved emails are added to the Cloudflare organization — there is no automatic approval.</p>
       </div>
     </section>
 
@@ -73,7 +73,14 @@
         <div class="form-card">
           <div id="formSuccess" class="form-success" role="status"></div>
 
-          <form id="accessForm" novalidate>
+          <form action="https://formsubmit.co/milnerg-admin@nebulaservices.live" method="POST">
+            <!-- FormSubmit config -->
+            <input type="hidden" name="_subject" value="Access Request — Nebula Services">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://nebulaservices.live/access?sent=1">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
             <div class="form-group">
               <label for="req-name">Full name</label>
               <input type="text" id="req-name" name="name" required placeholder="Your name" autocomplete="name">
@@ -113,7 +120,7 @@
             <ol class="steps">
               <li>
                 <strong>You submit the form</strong>
-                Your details are sent to the admin via email.
+                Your details are emailed directly to milnerg-admin@nebulaservices.live.
               </li>
               <li>
                 <strong>Review</strong>

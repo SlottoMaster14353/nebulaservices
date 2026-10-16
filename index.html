@@ -70,7 +70,7 @@
           <h2>A privately owned<br><span class="grad">media site.</span></h2>
           <div>
             <p>Everything here is built and run as a closed system. The media library is invitation-only. Content is acquired through legal channels. Access is controlled by Cloudflare Zero Trust — not open registration.</p>
-            <p>We also build and operate the digital infrastructure and small tools that support private, dependable systems.</p>
+            <p>We also build and operate the digital infrastructure and small tools that support private, dependable systems. The goal is simple: systems that stay quiet, stay secure, and work when you need them.</p>
             <a class="link" href="services.html">See full services →</a>
           </div>
         </div>
@@ -137,8 +137,58 @@
 
     <section class="section">
       <div class="wrap">
+        <div class="kicker">03 / How it works</div>
+        <h2>Built for people who are<br><span class="grad">supposed to be here.</span></h2>
+        <p class="lead" style="margin-bottom:28px">The media platform and protected systems are not products for the open internet. Access is granted by an admin after a request is reviewed.</p>
+
+        <div class="cards-2">
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">1</div>
+            <h3>Request access</h3>
+            <p>Submit the short form with your name, email, and what you need. That request is emailed straight to the admin.</p>
+          </article>
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">2</div>
+            <h3>Admin review</h3>
+            <p>Requests are reviewed manually. Approved emails are added to the Cloudflare organization — nothing is automatic.</p>
+          </article>
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">3</div>
+            <h3>Sign in</h3>
+            <p>You receive an auth code at your email. Browser access works through Cloudflare Access; mobile needs the Cloudflare One agent.</p>
+          </article>
+          <article class="card" style="min-height:auto">
+            <div class="card-icon">4</div>
+            <h3>Use the library</h3>
+            <p>Open jellyfin.nebulaservices.live (or the official Jellyfin app on mobile with WARP active) and stream from the private library.</p>
+          </article>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <strong>Invite only</strong>
+            <span>No public signup</span>
+          </div>
+          <div class="stat-card">
+            <strong>Zero Trust</strong>
+            <span>Cloudflare Access</span>
+          </div>
+          <div class="stat-card">
+            <strong>Legal media</strong>
+            <span>Acquired properly</span>
+          </div>
+          <div class="stat-card">
+            <strong>Human review</strong>
+            <span>Every request checked</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
         <div class="panel">
-          <div class="kicker">03 / Access model</div>
+          <div class="kicker">04 / Access model</div>
           <h2>Nothing here is public.</h2>
           <p>Every protected resource sits behind Cloudflare Access. Mobile clients require the Cloudflare One agent. Emails are added by administrators only. Auth codes go to those emails. No exceptions.</p>
           <div class="tags">
